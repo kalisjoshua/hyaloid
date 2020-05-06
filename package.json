@@ -1,0 +1,20 @@
+{
+  "name": "hyaloid",
+  "version": "1.0.0",
+  "description": "A very simple, zero-dependency, text editor html component.",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "start": "jest --coverage --watch",
+    "test": "jest"
+  },
+  "author": "Joshua T Kalis <joshkalis@quickenloans.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^26.0.1"
+  }
+}

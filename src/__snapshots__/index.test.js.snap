@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hyaloidEditor editor API should enable errors reset: errors 1`] = `
+Object {
+  "1": "Invalid line",
+  "2": "Invalid line",
+  "5": "Invalid line",
+}
+`;
+
+exports[`hyaloidEditor editor API should enable get/set content: more lines 1`] = `"<div data-initialized=\\"true\\"><pre class=\\"lineNumbers\\"><ins class=\\"lineNumber\\" data-has-error=\\"null\\">&nbsp;</ins><ins class=\\"lineNumber\\" data-has-error=\\"null\\">&nbsp;</ins><ins class=\\"lineNumber\\" data-has-error=\\"null\\">&nbsp;</ins><ins class=\\"lineNumber\\" data-has-error=\\"null\\">&nbsp;</ins></pre><textarea autocapitalize=\\"off\\" autocomplete=\\"off\\" autocorrect=\\"off\\" spellcheck=\\"false\\" name=\\"hyaloidEditor\\" style=\\"margin-left: 0px; width: calc(100% - 0px);\\"></textarea></div>"`;
+
+exports[`hyaloidEditor editor API should enable get/set content: no content 1`] = `"<div data-initialized=\\"true\\"><pre class=\\"lineNumbers\\"><ins class=\\"lineNumber\\" data-has-error=\\"null\\">&nbsp;</ins></pre><textarea autocapitalize=\\"off\\" autocomplete=\\"off\\" autocorrect=\\"off\\" spellcheck=\\"false\\" name=\\"hyaloidEditor\\" style=\\"margin-left: 0px; width: calc(100% - 0px);\\"></textarea></div>"`;
+
+exports[`hyaloidEditor editor API should enable get/set content: three lines 1`] = `"<div data-initialized=\\"true\\"><pre class=\\"lineNumbers\\"><ins class=\\"lineNumber\\" data-has-error=\\"null\\">&nbsp;</ins><ins class=\\"lineNumber\\" data-has-error=\\"null\\">&nbsp;</ins><ins class=\\"lineNumber\\" data-has-error=\\"null\\">&nbsp;</ins></pre><textarea autocapitalize=\\"off\\" autocomplete=\\"off\\" autocorrect=\\"off\\" spellcheck=\\"false\\" name=\\"hyaloidEditor\\" style=\\"margin-left: 0px; width: calc(100% - 0px);\\"></textarea></div>"`;
+
+exports[`hyaloidEditor editor API should enable get/set errors: errors 1`] = `
+Object {
+  "1": "Invalid line",
+  "2": "Invalid line",
+  "3": "Invalid line",
+  "4": "Invalid line",
+  "5": "Invalid line",
+}
+`;
+
+exports[`hyaloidEditor editor API should return an editor object 1`] = `
+Array [
+  "content",
+  "errors",
+  "hasErrors",
+  "lineCount",
+  "on",
+  "reset",
+  "setContent",
+  "setError",
+  "trigger",
+]
+`;
+
+exports[`hyaloidEditor should initialize the DOM elements: html 1`] = `"<div data-initialized=\\"true\\"><pre class=\\"lineNumbers\\"><ins class=\\"lineNumber\\" data-has-error=\\"null\\">&nbsp;</ins></pre><textarea autocapitalize=\\"off\\" autocomplete=\\"off\\" autocorrect=\\"off\\" spellcheck=\\"false\\" name=\\"hyaloidEditor\\" style=\\"margin-left: 0px; width: calc(100% - 0px);\\"></textarea></div>"`;

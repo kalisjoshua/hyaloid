@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`lineNumbersUpdate should insert multiple lineNumbers with content: numbers 1`] = `
+Array [
+  Object {
+    "dataset": Object {
+      "hasError": null,
+    },
+  },
+  Object {
+    "dataset": Object {
+      "hasError": null,
+    },
+  },
+  Object {
+    "dataset": Object {
+      "hasError": null,
+    },
+  },
+  Object {
+    "dataset": Object {
+      "hasError": null,
+    },
+  },
+  Object {
+    "dataset": Object {
+      "hasError": null,
+    },
+  },
+]
+`;
+
+exports[`lineNumbersUpdate should insert multiple lineNumbers with content: style 1`] = `
+Object {
+  "marginLeft": "60px",
+  "width": "calc(100% - 60px)",
+}
+`;
+
+exports[`lineNumbersUpdate should insert one lineNumber with no content: numbers 1`] = `
+Array [
+  Object {
+    "dataset": Object {
+      "hasError": null,
+    },
+  },
+]
+`;
+
+exports[`lineNumbersUpdate should insert one lineNumber with no content: style 1`] = `
+Object {
+  "marginLeft": "12px",
+  "width": "calc(100% - 12px)",
+}
+`;
+
+exports[`lineNumbersUpdate should keep line errors after edit: numbers 1`] = `
+Array [
+  Object {
+    "dataset": Object {
+      "hasError": true,
+    },
+    "title": "invalid for some reason",
+  },
+  Object {
+    "dataset": Object {
+      "hasError": null,
+    },
+  },
+  Object {
+    "dataset": Object {
+      "hasError": true,
+    },
+    "title": "invalid title",
+  },
+  Object {
+    "dataset": Object {
+      "hasError": null,
+    },
+  },
+  Object {
+    "dataset": Object {
+      "hasError": null,
+    },
+  },
+]
+`;
+
+exports[`lineNumbersUpdate should keep line errors after edit: style 1`] = `
+Object {
+  "marginLeft": "60px",
+  "width": "calc(100% - 60px)",
+}
+`;
+
+exports[`lineNumbersUpdate should show line errors: numbers 1`] = `
+Array [
+  Object {
+    "dataset": Object {
+      "hasError": true,
+    },
+    "title": "invalid for some reason",
+  },
+  Object {
+    "dataset": Object {
+      "hasError": true,
+    },
+    "title": "invalid because no numbers",
+  },
+  Object {
+    "dataset": Object {
+      "hasError": true,
+    },
+    "title": "invalid title",
+  },
+  Object {
+    "dataset": Object {
+      "hasError": true,
+    },
+    "title": "invalid line",
+  },
+  Object {
+    "dataset": Object {
+      "hasError": true,
+    },
+    "title": "invalid just because",
+  },
+]
+`;
+
+exports[`lineNumbersUpdate should show line errors: style 1`] = `
+Object {
+  "marginLeft": "60px",
+  "width": "calc(100% - 60px)",
+}
+`;
