@@ -88,6 +88,12 @@ function hyaloidEditor(selector) {
 
   /* istanbul ignore else */
   if (!element.dataset.initialized) {
+    const initialContent = element.innerHTML
+      .trim()
+      .split('\n')
+      .map((line) => line.replace(/^\s+/, ''))
+      .join('\n');
+
     element.editor = document.createElement('textarea');
     element.editor.setAttribute('autocapitalize', 'off');
     element.editor.setAttribute('autocomplete', 'off');
@@ -106,6 +112,7 @@ function hyaloidEditor(selector) {
     element.lineNumbers = document.createElement('pre');
     element.lineNumbers.classList.add('lineNumbers');
 
+    element.innerText = '';
     element.appendChild(element.lineNumbers);
     element.appendChild(element.editor);
 
@@ -118,7 +125,7 @@ function hyaloidEditor(selector) {
       element.lineCount = Math.max(1, linesOfContent);
     });
 
-    api.setContent();
+    api.setContent(initialContent);
 
     lineNumbersUpdate(element, insert);
 

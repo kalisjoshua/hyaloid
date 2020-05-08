@@ -1,7 +1,11 @@
 {
   "name": "hyaloid",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A very simple, zero-dependency, text editor html component.",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/kalisjoshua/hyaloid"
+  },
   "main": "src/index.js",
   "scripts": {
     "bundle": "rollup -c",

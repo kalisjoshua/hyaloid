@@ -21,25 +21,28 @@ describe('hyaloidEditor', () => {
     testElement = document.createElement('div');
   });
 
-  it('should be a function', () => {
-    expect(typeof hyaloidEditor).toBe('function');
-  });
-
   it('should initialize the DOM elements', () => {
-    hyaloidEditor('doesn\'t matter at all');
+    hyaloidEditor('.hyaloid');
 
     expect(testElement.outerHTML).toMatchSnapshot('html');
   });
 
+  it('should intialize with HTML content', () => {
+    testElement.innerHTML = 'Hello world.';
+    const editorWithContent = hyaloidEditor('.hyaloid');
+
+    expect(editorWithContent.content).toBe('Hello world.');
+  });
+
   describe('editor API', () => {
     it('should return an editor object', () => {
-      const editorAPI = hyaloidEditor('doesn\'t matter at all');
+      const editorAPI = hyaloidEditor('.hyaloid');
 
       expect(Object.keys(editorAPI)).toMatchSnapshot();
     });
 
     it('should enable get/set content', () => {
-      const editorAPI = hyaloidEditor('doesn\'t matter at all');
+      const editorAPI = hyaloidEditor('.hyaloid');
       let newContent;
 
       expect(editorAPI.content).toBe('');
@@ -59,14 +62,14 @@ describe('hyaloidEditor', () => {
     });
 
     it('should expose line count', () => {
-      const editorAPI = hyaloidEditor('doesn\'t matter at all');
+      const editorAPI = hyaloidEditor('.hyaloid');
 
       editorAPI.setContent(content);
       expect(editorAPI.lineCount).toBe(content.split(/\n/).length);
     });
 
     it('should enable get/set errors', () => {
-      const editorAPI = hyaloidEditor('doesn\'t matter at all');
+      const editorAPI = hyaloidEditor('.hyaloid');
 
       editorAPI.setContent(content);
 
@@ -81,7 +84,7 @@ describe('hyaloidEditor', () => {
     });
 
     it('should enable errors reset', () => {
-      const editorAPI = hyaloidEditor('doesn\'t matter at all');
+      const editorAPI = hyaloidEditor('.hyaloid');
 
       editorAPI.setError(1, 'Invalid line');
       editorAPI.setError(2, 'Invalid line');
@@ -112,7 +115,7 @@ describe('hyaloidEditor', () => {
     });
 
     it('should guard against invalid arguments passed to `.on()`', () => {
-      const editorAPI = hyaloidEditor('doesn\'t matter at all');
+      const editorAPI = hyaloidEditor('.hyaloid');
 
       expect(() => {
         editorAPI.on();
@@ -138,7 +141,7 @@ describe('hyaloidEditor', () => {
     });
 
     it('should guard against attempting to `.trigger()` invalid events', () => {
-      const editorAPI = hyaloidEditor('doesn\'t matter at all');
+      const editorAPI = hyaloidEditor('.hyaloid');
 
       const invalid = 'non-event';
 
@@ -148,7 +151,7 @@ describe('hyaloidEditor', () => {
     });
 
     it('should schedule and trigger events', (done) => {
-      const editorAPI = hyaloidEditor('doesn\'t matter at all');
+      const editorAPI = hyaloidEditor('.hyaloid');
 
       editorAPI.on('edit', () => {
         expect(true).toBe(true);
